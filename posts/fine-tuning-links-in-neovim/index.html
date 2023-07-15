@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html><head>
-	<meta name="generator" content="Hugo 0.115.3">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>The DaoDeJing Blog</title>
+    <title>Smoother Linking in Neovim - The DaoDeJing Blog</title>
 
     
     
-    <meta name="description" content="" />
+    <meta name="description" content="Motivated by the desire for a smooth-as-coconut-oil Neovim experience, I learnt how to eliminate some friction when navigating links.
+gx The Default Behavior Typing gx with the cursor above an http link, uses Netrw to open the link in your browser, so far so good.
+Typing gx with the cursor above a plugin ID such as chrishrb/gx.nvim, gives you an error:
+**warning** (netrw) shell signalled an error Using the plugin gx, I can also follow http links in Neovim by typing gx, overriding the default gx key-binding." />
     <meta name="author" content="" />
     
 
@@ -53,7 +55,13 @@
 </nav>
 <div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word">
         <div class="max-w:700 w:full box:content-box">
-<div class="d:flex flex:col"><div class="
+<article class="box:border-box pt:32">
+    <header class="mb:32">
+        <div class="font:40 font:extrabold">Smoother Linking in Neovim</div>
+        <div class="mt:16 f:fade-60">
+            <time>Jul 15, 2023</time>
+            </div>
+    </header><div class="
     _:where(a):hover{text-decoration-color:fade}
     _:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
     _:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
@@ -90,14 +98,40 @@
     _:where(video,img){max-width:full}
     _:where(a,mark){text-underline-offset:3}
     _:where(hr){h:2;_bg:fade-10;_bg:fade-70@dark;_my:3em}
-"></div><h2 class="my:1em">Posts</h2><div class="mb:12 py:8">
-    <a class="f:18! font:semibold! f:fade-30! text-decoration:none f:fade-10!:hover transition:150ms;ease-in" href="https://daodejing.github.io/posts/fine-tuning-links-in-neovim/">
-        Smoother Linking in Neovim
-    </a>
-    <div class="mt:12 f:14 f:fade-60"><time>Jul 15, 2023</time></div>
-    
-</div>
-</div>
+"><p>Motivated by the desire for a smooth-as-coconut-oil Neovim experience, I learnt how to eliminate some friction when navigating links.</p>
+<h2 id="gx">gx</h2>
+<h4 id="the-default-behavior">The Default Behavior</h4>
+<p>Typing <code>gx</code> with the cursor above an http link, uses Netrw to open the link in your browser, so far so good.</p>
+<p>Typing <code>gx</code> with the cursor above a plugin ID such as <code>chrishrb/gx.nvim</code>, gives you an error:</p>
+<pre tabindex="0"><code>**warning** (netrw) shell signalled an error
+</code></pre><p>Using the plugin <a href="https://github.com/chrishrb/gx.nvim"><code>gx</code></a>, I can also follow http links in Neovim by typing <code>gx</code>, overriding the default <code>gx</code> key-binding.</p>
+<pre tabindex="0"><code>...
+- https://github.com/nvim-treesitter/nvim-treesitter/issues/2634
+...
+</code></pre><p>This would take me to the gitub issue page for the above link on my default browser.</p>
+<p>It also works for plugin links, in lazy or packer plugin configs. Typing <code>gx</code> with the cursor over <code>chrishrb/gx.nvim</code>, takes me to the plugin&rsquo;s github repository: <a href="https://github.com/chrishrb/gx.nvim">https://github.com/chrishrb/gx.nvim</a></p>
+<pre tabindex="0"><code>{
+  &#34;chrishrb/gx.nvim&#34;,
+  event = { &#34;BufEnter&#34; },
+  dependencies = { &#34;nvim-lua/plenary.nvim&#34; },
+  config = true, -- default settings
+}
+</code></pre><ul>
+<li><code>gx</code> also handles searching via google when clicked over random text</li>
+<li>or for URLS without the protocol such as <code>google.com</code>
+&hellip;there are a number of other use-cases listed on the plugin homepage and more to come apparently.</li>
+</ul>
+<h2 id="gf">gF</h2>
+<p>This is built in to Neovim. Typing <code>gF</code> on the link below takes me to the file and the line number shown</p>
+<pre tabindex="0"><code>- `~/.config/nvim/lua/plugins/treesitter.lua (73)`
+</code></pre><ul>
+<li>typing <code>gx</code> on the above line opens a new buffer for my treesitter plugin configuration on line 73</li>
+</ul>
+<h2 id="fileline">fileline</h2>
+<p>This plugin enables you to specify a line number and column when opening a file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>➜ nvim hugo.toml:2:7
+</span></span></code></pre></div><p><img src="file-line-number.png" alt="Opening a file at line"></p>
+</div></article>
 <footer class="py:24">
     <div class="f:fade-30 f:14 mb:8"></div>
     <div class="f:fade-60 f:12">Theme <a class="f:bold" href="https://github.com/serkodev/holy" _target="_blank">Holy</a></div>
