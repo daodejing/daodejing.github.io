@@ -105,10 +105,6 @@ Typing gx with the cursor above a plugin ID such as chrishrb/gx.nvim, gives you 
 <p>Typing <code>gx</code> with the cursor above a plugin ID such as <code>chrishrb/gx.nvim</code>, gives you an error:</p>
 <pre tabindex="0"><code>**warning** (netrw) shell signalled an error
 </code></pre><p>Using the plugin <a href="https://github.com/chrishrb/gx.nvim"><code>gx</code></a>, I can also follow http links in Neovim by typing <code>gx</code>, overriding the default <code>gx</code> key-binding.</p>
-<pre tabindex="0"><code>...
-- https://github.com/nvim-treesitter/nvim-treesitter/issues/2634
-...
-</code></pre><p>This would take me to the gitub issue page for the above link on my default browser.</p>
 <p>It also works for plugin links, in lazy or packer plugin configs. Typing <code>gx</code> with the cursor over <code>chrishrb/gx.nvim</code>, takes me to the plugin&rsquo;s github repository: <a href="https://github.com/chrishrb/gx.nvim">https://github.com/chrishrb/gx.nvim</a></p>
 <pre tabindex="0"><code>{
   &#34;chrishrb/gx.nvim&#34;,
@@ -118,7 +114,8 @@ Typing gx with the cursor above a plugin ID such as chrishrb/gx.nvim, gives you 
 }
 </code></pre><ul>
 <li><code>gx</code> also handles searching via google when clicked over random text</li>
-<li>or for URLS without the protocol such as <code>google.com</code>
+<li>or for URLS without the protocol such as <code>google.com</code></li>
+<li>or for github issue numbers
 &hellip;there are a number of other use-cases listed on the plugin homepage and more to come apparently.</li>
 </ul>
 <h2 id="gf">gF</h2>
