@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on The DaoDeJing Blog</title>
+    <link>https://daodejing.github.io/posts/</link>
+    <description>Recent content in Posts on The DaoDeJing Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jul 2023 22:08:25 +0900</lastBuildDate><atom:link href="https://daodejing.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Smoother Linking in Neovim</title>
+      <link>https://daodejing.github.io/posts/fine-tuning-links-in-neovim/</link>
+      <pubDate>Sat, 15 Jul 2023 22:08:25 +0900</pubDate>
+      
+      <guid>https://daodejing.github.io/posts/fine-tuning-links-in-neovim/</guid>
+      <description>Motivated by the desire for a smooth-as-coconut-oil Neovim experience, I learnt how to eliminate some friction when navigating links.
+gx The Default Behavior Typing gx with the cursor above an http link, uses Netrw to open the link in your browser, so far so good.
+Typing gx with the cursor above a plugin ID such as chrishrb/gx.nvim, gives you an error:
+**warning** (netrw) shell signalled an error Using the plugin chrishrb/gx.</description>
+    </item>
+    
+  </channel>
+</rss>
