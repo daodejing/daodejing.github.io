@@ -16,7 +16,7 @@
       <description>Motivated by the desire for a smooth-as-coconut-oil Neovim experience, I learnt how to eliminate some friction when navigating links.
 gx The Default Behavior Typing gx with the cursor above an http link, uses Netrw to open the link in your browser, so far so good.
 Typing gx with the cursor above a plugin ID such as chrishrb/gx.nvim, gives you an error:
-**warning** (netrw) shell signalled an error Using the plugin gx, I can also follow http links in Neovim by typing gx, overriding the default gx key-binding.</description>
+**warning** (netrw) shell signalled an error Using the plugin chrishrb/gx.</description>
     </item>
     
   </channel>
