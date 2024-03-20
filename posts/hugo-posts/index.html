@@ -8,7 +8,7 @@
 
     
     
-    <meta name="description" content="If you haven&rsquo;t done so already, setup Hugo with github pages Create a new post markdown file: ➜ hugo new content posts/hugo-posts.md In order for the new post to be displayed in blog site, delete the draft: true line from the frontmatter yaml at the top of the markdown file: --- title: &#34;Create a Hugo Blog Post&#34; date: 2024-03-20T17:42:24&#43;09:00 draft: true --- Write your blog (you&rsquo;re on your own here) Create the static html resources for the new post, using the holy theme: ➜ hugo -t holy Update the remote github pages repo: ➜ cd public ➜ git add ." />
+    <meta name="description" content="If you haven&rsquo;t done so already, setup Hugo with github pages Create a new post markdown file: ➜ hugo new content posts/hugo-posts.md In order for the new post to be displayed in blog site, delete the draft: true line from the frontmatter yaml at the top of the markdown file: --- title: &#34;Create a Hugo Blog Post&#34; date: 2024-03-20T17:42:24&#43;09:00 draft: true --- Write your blog You&rsquo;re on your own here, but you can run a local hugo server from your hugo root directory to preview your changes: you can know which is the hugo root directory, because it contains the hugo configuration file: hugo." />
     <meta name="author" content="" />
     
 
@@ -109,7 +109,15 @@
 </span></span><span style="display:flex;"><span>draft: true
 </span></span><span style="display:flex;"><span>---
 </span></span></code></pre></div><ul>
-<li>Write your blog (you&rsquo;re on your own here)</li>
+<li>Write your blog
+<ul>
+<li>You&rsquo;re on your own here, but you can run a local hugo server from your hugo root directory to preview your changes:</li>
+<li>you can know which is the hugo root directory, because it contains the hugo configuration file: <code>hugo.toml</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><ul>
 <li>Create the static html resources for the new post, using the <code>holy</code> theme:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>➜ hugo -t holy

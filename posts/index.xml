@@ -13,7 +13,7 @@
       <pubDate>Wed, 20 Mar 2024 17:42:24 +0900</pubDate>
       
       <guid>https://daodejing.github.io/posts/hugo-posts/</guid>
-      <description>If you haven&amp;rsquo;t done so already, setup Hugo with github pages Create a new post markdown file: ➜ hugo new content posts/hugo-posts.md In order for the new post to be displayed in blog site, delete the draft: true line from the frontmatter yaml at the top of the markdown file: --- title: &amp;#34;Create a Hugo Blog Post&amp;#34; date: 2024-03-20T17:42:24+09:00 draft: true --- Write your blog (you&amp;rsquo;re on your own here) Create the static html resources for the new post, using the holy theme: ➜ hugo -t holy Update the remote github pages repo: ➜ cd public ➜ git add .</description>
+      <description>If you haven&amp;rsquo;t done so already, setup Hugo with github pages Create a new post markdown file: ➜ hugo new content posts/hugo-posts.md In order for the new post to be displayed in blog site, delete the draft: true line from the frontmatter yaml at the top of the markdown file: --- title: &amp;#34;Create a Hugo Blog Post&amp;#34; date: 2024-03-20T17:42:24+09:00 draft: true --- Write your blog You&amp;rsquo;re on your own here, but you can run a local hugo server from your hugo root directory to preview your changes: you can know which is the hugo root directory, because it contains the hugo configuration file: hugo.</description>
     </item>
     
     <item>
