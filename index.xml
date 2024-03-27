@@ -6,7 +6,21 @@
     <description>Recent content on The DaoDeJing Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Mar 2024 17:42:24 +0900</lastBuildDate><atom:link href="https://daodejing.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Mar 2024 15:17:57 +0900</lastBuildDate><atom:link href="https://daodejing.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Toy K8s</title>
+      <link>https://daodejing.github.io/posts/toy-k8s/</link>
+      <pubDate>Sat, 23 Mar 2024 15:17:57 +0900</pubDate>
+      
+      <guid>https://daodejing.github.io/posts/toy-k8s/</guid>
+      <description>This works on my M2 Mac.
+You can get lima sample configurations here.
+Spin up Lima k3d:
+# When running for the first time ➜ limactl start ./examples/k3s.yaml # or If you have already created the VM image ➜ limactl start k3s Configure your host kubectl to connect to the lima k3s:
+➜ export KUBECONFIG=&amp;#34;$HOME/.lima/k3s/copied-from-guest/kubeconfig.yaml&amp;#34; (The below was copied from: https://docs.k3s.io/storage)
+Create Longhorn Storage: Longhorn Storage allows for ReadWriteMany from Pods kubectl apply -f https://raw.</description>
+    </item>
+    
     <item>
       <title>Create a Hugo Blog Post</title>
       <link>https://daodejing.github.io/posts/hugo-posts/</link>
